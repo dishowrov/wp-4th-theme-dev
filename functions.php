@@ -53,6 +53,18 @@ function temo_widget_areas()
             'after_title' => '',
         )
     );
+
+    register_sidebar(
+        array(
+            'name' => __('Person Big Picture', 'temo'),
+            'id' => 'temo-hero-big-img',
+            'description' => __('This is a full and big picture section of the user', 'temo'),
+            'before_widget' => '<div class="widget %1$s %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '',
+            'after_title' => '',
+        )
+    );
 }
 add_action('widgets_init', 'temo_widget_areas');
 

@@ -53,9 +53,9 @@ $hero_btn_link = get_post_meta(get_the_ID(), "hero button link", true);
 
             <!-- For the profile picture -->
             <?php
-            // if (is_active_sidebar('temo-hero-pp')) :
-            //     dynamic_sidebar('temo-hero-pp');
-            // endif;
+            if (is_active_sidebar('temo-hero-pp')) :
+                dynamic_sidebar('temo-hero-pp');
+            endif;
             ?>
 
             <!-- For the profile picture -->
@@ -81,8 +81,16 @@ $hero_btn_link = get_post_meta(get_the_ID(), "hero button link", true);
 
         </div>
 
-        <div class="col-md-6">
-
+        <div class="col-md-6 position-relative">
+            <div class="hero-image-wrap"></div>
+            <div class="hero-image img-fluid">
+                <?php
+                if (is_active_sidebar('temo-hero-big-img')) :
+                    dynamic_sidebar('temo-hero-big-img');
+                endif;
+                ?>
+            </div>
         </div>
+
     </div>
 </div>

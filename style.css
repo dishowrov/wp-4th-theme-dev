@@ -88,3 +88,21 @@ Text Domain: temo
     --bs-body-color: #212529;
     --bs-body-bg: #fff;
 }
+
+.hero-image-wrap {
+    background: var(--white-color);
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    z-index: 22;
+    top: -50px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    pointer-events: none;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
