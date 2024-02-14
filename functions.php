@@ -1,6 +1,5 @@
 <?php
 
-
 function temo_bootstrapping()
 {
     load_theme_textdomain("temo");
@@ -138,3 +137,22 @@ function temo_handle_profile_picture()
     }
 }
 add_action('wp_ajax_handle_profile_picture', 'temo_handle_profile_picture');
+
+function temo_page_template_banner()
+{
+    if (is_front_page()) {
+       if(current_theme_supports("custom-header")){
+        
+        ?>
+        <style>
+            .hero {
+                background-image: url(<?php echo header_image(); ?>);
+            }
+        </style>
+    <?php
+       }
+    }
+}
+add_action("wp_head", "temo_page_template_banner");
+
+?>
