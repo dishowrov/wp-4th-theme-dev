@@ -23,7 +23,6 @@ function temo_bootstrapping()
     add_theme_support("custom-logo", $temo_custom_logo_details);
 
     add_theme_support("custom-background");
-    add_theme_support("post-formats", array("aside", "gallery", "link", "image", "quote", "status", "video", "audio", "chat"));
 
     register_nav_menu("temo-nav-menu", __("Nav Menu", "temo"));
 }
