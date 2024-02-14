@@ -5,13 +5,14 @@ $hero_title = get_post_meta(get_the_ID(), "hero title", true);
 $hero_btn_text = get_post_meta(get_the_ID(), "hero button text", true);
 $hero_btn_link = get_post_meta(get_the_ID(), "hero button link", true);
 
-
 ?>
 
 
 <!-- Header -->
-<div class="container">
+<div class="container header">
     <div class="row">
+
+        <!-- Logo -->
         <div class="col-md-2">
 
             <!-- Custom Logo Setup -->
@@ -40,57 +41,72 @@ $hero_btn_link = get_post_meta(get_the_ID(), "hero button link", true);
                 ?>
             </div>
         </div>
-    </div>
-</div>
 
-
-
-
-<!-- Hero -->
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-
-            <!-- For the profile picture -->
-            <?php
-            if (is_active_sidebar('temo-hero-pp')) :
-                dynamic_sidebar('temo-hero-pp');
-            endif;
-            ?>
-
-            <!-- For the profile picture -->
-            <?php
-            $profile_picture = get_theme_mod('profile_picture');
-            if ($profile_picture) {
-                echo '<img src="' . esc_url($profile_picture) . '" alt="Profile Picture">';
-            }
-            ?>
-
-            <!-- For the other informations -->
-            <h4>
-                <?php echo esc_html($hero_subtitle); ?>
-            </h4>
-
-            <h1>
-                <?php echo esc_html($hero_title); ?>
-            </h1>
-
-            <a href="<?php echo esc_attr($hero_btn_link); ?>">
-                <?php echo esc_html($hero_btn_text); ?>
-            </a>
-
-        </div>
-
-        <div class="col-md-6 position-relative">
-            <div class="hero-image-wrap"></div>
-            <div class="hero-image img-fluid">
+        <!-- Contact -->
+        <div class="col-md-3">
+            <div class="header-rigt-part">
                 <?php
-                if (is_active_sidebar('temo-hero-big-img')) :
-                    dynamic_sidebar('temo-hero-big-img');
+                if (is_active_sidebar('temo-header-info')) :
+                    dynamic_sidebar('temo-header-info');
                 endif;
                 ?>
             </div>
         </div>
-
     </div>
 </div>
+
+
+<!-- Hero -->
+<section class="custom-background-section" style="
+    background-image: url('<?php echo esc_url(get_theme_mod('background_image', '')); ?>');
+    background-color: <?php echo esc_attr(get_theme_mod('background_color', '#ffffff')); ?>;
+">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+
+                <!-- For the profile picture -->
+                <?php
+                if (is_active_sidebar('temo-hero-pp')) :
+                    dynamic_sidebar('temo-hero-pp');
+                endif;
+                ?>
+
+                <!-- For the profile picture -->
+                <?php
+                $profile_picture = get_theme_mod('profile_picture');
+                if ($profile_picture) {
+                    echo '<img src="' . esc_url($profile_picture) . '" alt="Profile Picture">';
+                }
+                ?>
+
+                <!-- For the other informations -->
+                <h4>
+                    <?php echo esc_html($hero_subtitle); ?>
+                </h4>
+
+                <h1>
+                    <?php echo esc_html($hero_title); ?>
+                </h1>
+
+                <a href="<?php echo esc_attr($hero_btn_link); ?>">
+                    <?php echo esc_html($hero_btn_text); ?>
+                </a>
+
+            </div>
+
+            <div class="col-md-6 position-relative">
+                <div class="hero-image-wrap"></div>
+                <div class="hero-image img-fluid">
+                    <?php
+                    if (is_active_sidebar('temo-hero-big-img')) :
+                        dynamic_sidebar('temo-hero-big-img');
+                    endif;
+                    ?>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

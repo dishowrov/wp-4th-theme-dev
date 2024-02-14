@@ -89,13 +89,17 @@ Text Domain: temo
     --bs-body-bg: #fff;
 }
 
+.header {
+    padding: 25px 0;
+}
+
 .hero-image-wrap {
     background: var(--white-color);
     width: 350px;
     height: 350px;
     position: absolute;
     z-index: 22;
-    top: -50px;
+    top: 0;
     right: 0;
     left: 0;
     margin: auto;
@@ -105,4 +109,13 @@ Text Domain: temo
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+}
+
+.hero-image {
+    position: absolute;
+    z-index: 22;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    min-width: 550px;
 }

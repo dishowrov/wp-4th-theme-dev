@@ -44,6 +44,18 @@ function temo_widget_areas()
 {
     register_sidebar(
         array(
+            'name' => __('Header Right Info', 'temo'),
+            'id' => 'temo-header-info',
+            'description' => __("Header part's extra informations area of the user", 'temo'),
+            'before_widget' => '<div class="widget %1$s %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '',
+            'after_title' => '',
+        )
+    );
+
+    register_sidebar(
+        array(
             'name' => __('Person Profile Picture', 'temo'),
             'id' => 'temo-hero-pp',
             'description' => __('This is a profile picture section of the user', 'temo'),
@@ -68,7 +80,8 @@ function temo_widget_areas()
 }
 add_action('widgets_init', 'temo_widget_areas');
 
-function temo_customize_register($wp_customize) {
+function temo_customize_register($wp_customize)
+{
     $wp_customize->add_section('profile_section', array(
         'title' => __('Profile Picture', 'temo'),
         'priority' => 30,
@@ -84,14 +97,45 @@ function temo_customize_register($wp_customize) {
         'section' => 'profile_section',
         'settings' => 'profile_picture',
     )));
+
+    // Add Background Section
+    $wp_customize->add_section('background_section', array(
+        'title' => __('Background Settings', 'temo'),
+        'priority' => 32,
+    ));
+
+    // Add Background Image Setting
+    $wp_customize->add_setting('background_image', array(
+        'default' => '',
+        'transport' => 'refresh',
+    ));
+
+    // Add Background Image Control
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'background_image', array(
+        'label' => __('Upload Background Image', 'temo'),
+        'section' => 'background_section',
+        'settings' => 'background_image',
+    )));
+
+    // Add Background Color Setting
+    $wp_customize->add_setting('background_color', array(
+        'default' => '#ffffff',
+        'transport' => 'refresh',
+    ));
+
+    // Add Background Color Control
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'background_color', array(
+        'label' => __('Background Color', 'temo'),
+        'section' => 'background_section',
+        'settings' => 'background_color',
+    )));
 }
 add_action('customize_register', 'temo_customize_register');
 
-function temo_handle_profile_picture() {
+function temo_handle_profile_picture()
+{
     if (isset($_POST['profile_picture'])) {
         set_theme_mod('profile_picture', sanitize_text_field($_POST['profile_picture']));
     }
 }
 add_action('wp_ajax_handle_profile_picture', 'temo_handle_profile_picture');
-
-
