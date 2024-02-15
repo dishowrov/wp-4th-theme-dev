@@ -1,6 +1,6 @@
 <?php
 
-$service_icon = get_post_meta(get_the_ID(), "service icon", true);
+
 
 $args = array(
     'posts_per_page' => 5,
@@ -53,7 +53,8 @@ if ($temo_services_query->have_posts()) :
 
                             <div class="services-icon-part">
                                 <?php
-                                echo esc_html($service_icon);
+                                $service_icon = get_post_meta(get_the_ID(), "service icon", true);
+                                echo $service_icon ;
                                 ?>
                             </div>
                         </div>
