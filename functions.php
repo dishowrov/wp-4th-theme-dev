@@ -27,6 +27,8 @@ function temo_bootstrapping()
 }
 add_action("after_setup_theme", "temo_bootstrapping");
 
+
+
 function temo_assets()
 {
     wp_enqueue_style("temo-bootstrapCSS", get_theme_file_uri("/assets/css/bootstrap.min.css"));
@@ -37,6 +39,8 @@ function temo_assets()
     wp_enqueue_script("temo-customJS", get_theme_file_uri("/assets/js/custom.js"), array("jquery"), "0", true);
 }
 add_action("wp_enqueue_scripts", "temo_assets");
+
+
 
 function temo_widget_areas()
 {
@@ -114,6 +118,8 @@ function temo_widget_areas()
 }
 add_action('widgets_init', 'temo_widget_areas');
 
+
+
 function temo_customize_register($wp_customize)
 {
     $wp_customize->add_section('profile_section', array(
@@ -134,6 +140,9 @@ function temo_customize_register($wp_customize)
 }
 add_action('customize_register', 'temo_customize_register');
 
+
+
+
 function temo_handle_profile_picture()
 {
     if (isset($_POST['profile_picture'])) {
@@ -141,5 +150,3 @@ function temo_handle_profile_picture()
     }
 }
 add_action('wp_ajax_handle_profile_picture', 'temo_handle_profile_picture');
-
-?>
