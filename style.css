@@ -209,3 +209,50 @@ Text Domain: temo
     color: var(--white-color);
     background-color: var(--secondary-color);
 }
+
+.about {
+    padding: 115px 15px;
+}
+
+.about-left-img img {
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.about-right-top {
+    background-color: #14b789;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 25px;
+    padding: 15px 25px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.about-right-top h2 {
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -1px;
+    font-size: var(--h2-font-size);
+    color: var(--secondary-color);
+    letter-spacing: -3px;
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-white-rgb),var(--bs-text-opacity))!important;
+}
+
+.about-right-top img {
+    height: 160px;
+    width: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}

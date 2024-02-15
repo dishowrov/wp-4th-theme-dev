@@ -75,6 +75,42 @@ function temo_widget_areas()
             'after_title' => '',
         )
     );
+
+    register_sidebar(
+        array(
+            'name' => __('About Left Image', 'temo'),
+            'id' => 'temo-about-left-img',
+            'description' => __('This is a about section image', 'temo'),
+            'before_widget' => '<div class="widget %1$s %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '',
+            'after_title' => '',
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name' => __('About Title', 'temo'),
+            'id' => 'temo-about-title',
+            'description' => __('This is title of about section', 'temo'),
+            'before_widget' => '<div class="widget %1$s %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '<h2>',
+            'after_title' => '</h2>',
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name' => __('About Right Image', 'temo'),
+            'id' => 'temo-about-right-img',
+            'description' => __('This is another about section image', 'temo'),
+            'before_widget' => '<div class="widget %1$s %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '',
+            'after_title' => '',
+        )
+    );
 }
 add_action('widgets_init', 'temo_widget_areas');
 

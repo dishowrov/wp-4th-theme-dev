@@ -58,8 +58,6 @@ $hero_btn_link = get_post_meta(get_the_ID(), "hero button link", true);
 
 <!-- Hero & Header -->
 <div class="container-fluid hero-nd-header">
-
-
     <img src="<?php echo get_template_directory_uri(); ?> ./assets/img/hero-part/hero-bg-img.png" alt="" class="hero-bg-shape">
 
     <!-- Hero -->
@@ -113,11 +111,29 @@ $hero_btn_link = get_post_meta(get_the_ID(), "hero button link", true);
 <div class="container about">
     <div class="row">
         <div class="col-md-6">
-
+            <span class="about-left-img">
+                <?php
+                if (is_active_sidebar('temo-about-left-img')) :
+                    dynamic_sidebar('temo-about-left-img');
+                endif;
+                ?>
+            </span>
         </div>
 
         <div class="col-md-6">
-            
+            <div class="about-right-top">
+                <?php
+                if (is_active_sidebar('temo-about-title')) :
+                    dynamic_sidebar('temo-about-title');
+                endif;
+                ?>
+
+                <?php
+                if (is_active_sidebar('temo-about-right-img')) :
+                    dynamic_sidebar('temo-about-right-img');
+                endif;
+                ?>
+            </div>
         </div>
     </div>
 </div>
