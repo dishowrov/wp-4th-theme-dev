@@ -95,38 +95,6 @@ function temo_customize_register($wp_customize)
         'section' => 'profile_section',
         'settings' => 'profile_picture',
     )));
-
-    // Add Background Section
-    $wp_customize->add_section('background_section', array(
-        'title' => __('Background Settings', 'temo'),
-        'priority' => 32,
-    ));
-
-    // Add Background Image Setting
-    $wp_customize->add_setting('background_image', array(
-        'default' => '',
-        'transport' => 'refresh',
-    ));
-
-    // Add Background Image Control
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'background_image', array(
-        'label' => __('Upload Background Image', 'temo'),
-        'section' => 'background_section',
-        'settings' => 'background_image',
-    )));
-
-    // Add Background Color Setting
-    $wp_customize->add_setting('background_color', array(
-        'default' => '#ffffff',
-        'transport' => 'refresh',
-    ));
-
-    // Add Background Color Control
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'background_color', array(
-        'label' => __('Background Color', 'temo'),
-        'section' => 'background_section',
-        'settings' => 'background_color',
-    )));
 }
 add_action('customize_register', 'temo_customize_register');
 
@@ -137,22 +105,5 @@ function temo_handle_profile_picture()
     }
 }
 add_action('wp_ajax_handle_profile_picture', 'temo_handle_profile_picture');
-
-// function temo_page_template_banner()
-// {
-//     if (is_front_page()) {
-//        if(current_theme_supports("custom-header")){
-        
-//         ?>
-<!-- //         <style>
-//             .hero {
-//                 background-image: url(<?php //echo header_image(); ?>);
-//             }
-//         </style> -->
-//     <?php
-//        }
-//     }
-// }
-// add_action("wp_head", "temo_page_template_banner");
 
 ?>

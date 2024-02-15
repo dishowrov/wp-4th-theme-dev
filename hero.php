@@ -7,100 +7,117 @@ $hero_btn_link = get_post_meta(get_the_ID(), "hero button link", true);
 
 ?>
 
-
 <!-- Header -->
-<div class="container header">
-    <div class="row">
+<div class="container-fluid header">
+    <div class="container">
+        <div class="row">
 
-        <!-- Logo -->
-        <div class="col-md-2">
+            <!-- Logo -->
+            <div class="col-md-2">
 
-            <!-- Custom Logo Setup -->
-            <?php
-            if (current_theme_supports("custom-logo")) :
-            ?>
-                <div class="hero-logo">
-                    <?php the_custom_logo(); ?>
-                </div>
-            <?php
-            endif;
-            ?>
-        </div>
-
-        <!-- Hero Menu -->
-        <div class="col-md-7">
-            <div class="navigation">
+                <!-- Custom Logo Setup -->
                 <?php
-                wp_nav_menu(
-                    array(
-                        'theme_location' => 'temo-nav-menu',
-                        'menu_id' => 'nav-menu-container',
-                        'menu_class' => 'list-inline',
-                    )
-                )
+                if (current_theme_supports("custom-logo")) :
                 ?>
-            </div>
-        </div>
-
-        <!-- Contact -->
-        <div class="col-md-3">
-            <div class="header-rigt-part">
+                    <div class="hero-logo">
+                        <?php the_custom_logo(); ?>
+                    </div>
                 <?php
-                if (is_active_sidebar('temo-header-info')) :
-                    dynamic_sidebar('temo-header-info');
                 endif;
                 ?>
+            </div>
+
+            <!-- Hero Menu -->
+            <div class="col-md-7">
+                <div class="navigation">
+                    <?php
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'temo-nav-menu',
+                            'menu_id' => 'nav-menu-container',
+                            'menu_class' => 'list-inline',
+                        )
+                    )
+                    ?>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-md-3">
+                <div class="header-rigt-part">
+                    <?php
+                    if (is_active_sidebar('temo-header-info')) :
+                        dynamic_sidebar('temo-header-info');
+                    endif;
+                    ?>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+<!-- Hero & Header -->
+<div class="container-fluid hero-nd-header">
 
-<!-- Hero -->
-<div class="container hero">
+
+    <img src="<?php echo get_template_directory_uri(); ?> ./assets/img/hero-part/hero-bg-img.png" alt="" class="hero-bg-shape">
+
+    <!-- Hero -->
+    <div class="container hero">
+        <div class="row">
+            <div class="col-md-7">
+
+                <!-- For the profile picture -->
+                <div class="hero-left-top">
+                    <span class="hero-profile-pic">
+                        <?php
+                        if (is_active_sidebar('temo-hero-pp')) :
+                            dynamic_sidebar('temo-hero-pp');
+                        endif;
+                        ?>
+                    </span>
+
+                    <!-- For the other informations -->
+                    <span class="hero-subtitle">
+                        <?php echo esc_html($hero_subtitle); ?>
+                    </span>
+                </div>
+
+                <h1 class="hero-title">
+                    <?php echo esc_html($hero_title); ?>
+                </h1>
+
+                <a href="<?php echo esc_attr($hero_btn_link); ?>" class="hero-btn">
+                    <?php echo esc_html($hero_btn_text); ?>
+                </a>
+
+            </div>
+
+            <div class="col-md-5 position-relative">
+                <div class="hero-image-wrap"></div>
+                <div class="hero-image img-fluid">
+                    <?php
+                    if (is_active_sidebar('temo-hero-big-img')) :
+                        dynamic_sidebar('temo-hero-big-img');
+                    endif;
+                    ?>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- About -->
+<div class="container about">
     <div class="row">
         <div class="col-md-6">
 
-            <!-- For the profile picture -->
-            <?php
-            if (is_active_sidebar('temo-hero-pp')) :
-                dynamic_sidebar('temo-hero-pp');
-            endif;
-            ?>
-
-            <!-- For the profile picture -->
-            <?php
-            $profile_picture = get_theme_mod('profile_picture');
-            if ($profile_picture) {
-                echo '<img src="' . esc_url($profile_picture) . '" alt="Profile Picture">';
-            }
-            ?>
-
-            <!-- For the other informations -->
-            <h4>
-                <?php echo esc_html($hero_subtitle); ?>
-            </h4>
-
-            <h1>
-                <?php echo esc_html($hero_title); ?>
-            </h1>
-
-            <a href="<?php echo esc_attr($hero_btn_link); ?>">
-                <?php echo esc_html($hero_btn_text); ?>
-            </a>
-
         </div>
 
-        <div class="col-md-6 position-relative">
-            <div class="hero-image-wrap"></div>
-            <div class="hero-image img-fluid">
-                <?php
-                if (is_active_sidebar('temo-hero-big-img')) :
-                    dynamic_sidebar('temo-hero-big-img');
-                endif;
-                ?>
-            </div>
+        <div class="col-md-6">
+            
         </div>
-
     </div>
 </div>
