@@ -19,62 +19,56 @@ $info_awards = get_post_meta(get_the_ID(), "awards", true);
         <div class="row">
             <div class="col-md-6">
 
-                <table>
-                    <tr>
-                        <th>Information</th>
-                    </tr>
+                <div class="profile-thumb">
+                    <div class="profile-title">
+                        <h4 class="mb-0">Information</h4>
+                    </div>
 
-                    <tr>
-                        <td>
-                            <span>Name</span>
-                        </td>
-                        <td>
-                            <?php
-                            echo esc_html($info_name);
-                            ?>
-                        </td>
-                    </tr>
+                    <div class="profile-body">
+                        <p>
+                            <span class="profile-small-title">Name</span>
+                            <span>
+                                <?php
+                                echo esc_html($info_name);
+                                ?>
+                            </span>
+                        </p>
 
-                    <tr>
-                        <td>
-                            <span>Birthday</span>
-                        </td>
-                        <td>
-                            <?php
-                            echo esc_html($info_birthday);
-                            ?>
-                        </td>
-                    </tr>
+                        <p>
+                            <span class="profile-small-title">Birthday</span>
+                            <span>
+                                <?php
+                                echo esc_html($info_birthday);
+                                ?>
+                            </span>
+                        </p>
 
-                    <tr>
-                        <td>
-                            <span>Phone</span>
-                        </td>
-                        <td>
-                            <?php
-                            echo esc_html($info_phone);
-                            ?>
-                        </td>
-                    </tr>
+                        <p>
+                            <span class="profile-small-title">Phone</span>
+                            <span><a href="tel: 305-240-9671">
+                                    <?php
+                                    echo esc_html($info_phone);
+                                    ?>
+                                </a></span>
+                        </p>
 
-                    <tr>
-                        <td>
-                            <span>Email</span>
-                        </td>
-                        <td>
-                            <?php
-                            echo esc_html($info_email);
-                            ?>
-                        </td>
-                    </tr>
-                </table>
+                        <p>
+                            <span class="profile-small-title">Email</span>
+                            <span><a href="mailto:hello@josh.design">
+                                    <?php
+                                    echo esc_html($info_email);
+                                    ?>
+                                </a></span>
+                        </p>
+                    </div>
+                </div>
 
             </div>
 
             <div class="col-md-6">
                 <div class="row">
 
-                    <div class="col-md-6">
+                    <div class="col-lg-6 col-6 featured-border-bottom py-2">
                         <strong class="featured-numbers">
                             <?php
                             echo esc_html($info_experiences)
@@ -84,7 +78,7 @@ $info_awards = get_post_meta(get_the_ID(), "awards", true);
                         <p class="featured-text">Years of Experiences</p>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-lg-6 col-6 featured-border-start featured-border-bottom ps-5 py-2">
                         <strong class="featured-numbers">
                             <?php
                             echo esc_html($info_customers)
@@ -94,7 +88,7 @@ $info_awards = get_post_meta(get_the_ID(), "awards", true);
                         <p class="featured-text">Happy Customers</p>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-lg-6 col-6 pt-4">
                         <strong class="featured-numbers">
                             <?php
                             echo esc_html($info_projects)
@@ -104,7 +98,7 @@ $info_awards = get_post_meta(get_the_ID(), "awards", true);
                         <p class="featured-text">Project Finished</p>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-lg-6 col-6 featured-border-start ps-5 pt-4">
                         <strong class="featured-numbers">
                             <?php
                             echo esc_html($info_awards)

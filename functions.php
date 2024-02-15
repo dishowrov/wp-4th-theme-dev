@@ -150,3 +150,37 @@ function temo_handle_profile_picture()
     }
 }
 add_action('wp_ajax_handle_profile_picture', 'temo_handle_profile_picture');
+
+
+function temo_services()
+{
+    register_post_type(
+        'Services',
+        array(
+            'labels' => array(
+                'name' => ('Services'),
+                'singular_name' => ('Service'),
+                'add_new' => ('Add New Service'),
+                'add_new_item' => ('Add New Service'),
+                'edit_item' => ('Edit Service'),
+                'new_item' => ('New Service'),
+                'view_item' => ('View Service'),
+                'not_found' => ("Sorry, we coundn't find the project you are looking for."),
+            ),
+            'menu_icon' => 'dashicons-admin-tools',
+            'public' => true,
+            'publicly_queryable' => true,
+            'exclude_from_search' => true,
+            'menu_position' => 3,
+            'has_archive' => true,
+            'hierarchial' => true,
+            'show_ui' => true,
+            'capability_type' => 'post',
+            'rewrite' => array('slag' => 'service'),
+            'supports' => array('title', 'thumbnail', 'editor','custom-fields'),
+        )
+    );
+    add_theme_support('post-thumbnails');
+}
+
+add_action('init', 'temo_services');
