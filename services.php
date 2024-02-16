@@ -50,7 +50,8 @@ if ($temo_services_query->have_posts()) :
                             <div class="services-icon-part">
                                 <?php
                                 $service_icon = get_post_meta(get_the_ID(), "service icon", true);
-                                echo $service_icon ;
+
+                                echo $service_icon;
                                 ?>
                             </div>
                         </div>
