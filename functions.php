@@ -115,6 +115,30 @@ function temo_widget_areas()
             'after_title' => '',
         )
     );
+    
+    register_sidebar(
+        array(
+            'name' => __('Services Title Image', 'temo'),
+            'id' => 'temo-services-title-img',
+            'description' => __('This is Services title image', 'temo'),
+            'before_widget' => '<div class="widget %1$s %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '',
+            'after_title' => '',
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name' => __('Services Title Text', 'temo'),
+            'id' => 'temo-services-title-txt',
+            'description' => __('This is Services title text', 'temo'),
+            'before_widget' => '<div class="widget %1$s %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '',
+            'after_title' => '',
+        )
+    );
 }
 add_action('widgets_init', 'temo_widget_areas');
 
@@ -177,7 +201,7 @@ function temo_services()
             'show_ui' => true,
             'capability_type' => 'post',
             'rewrite' => array('slag' => 'service'),
-            'supports' => array('title', 'thumbnail', 'editor','custom-fields'),
+            'supports' => array('title', 'thumbnail', 'editor', 'custom-fields'),
         )
     );
     add_theme_support('post-thumbnails');

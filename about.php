@@ -14,7 +14,7 @@ $about_details = get_post_meta(get_the_ID(), "about details", true);
                 if (is_active_sidebar('temo-about-left-img')) :
                     dynamic_sidebar('temo-about-left-img');
                 endif;
-                ?>
+                ?> 
             </span>
         </div>
 
