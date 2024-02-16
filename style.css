@@ -271,6 +271,12 @@ Text Domain: temo
     font-weight: var(--font-weight-normal);
 }
 
+.info {
+    background: var(--section-bg-color);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
 .info .featured-border-bottom {
     border-bottom: 1px solid var(--border-color);
 }
@@ -278,8 +284,6 @@ Text Domain: temo
 .info .featured-border-start {
     border-left: 1px solid var(--border-color);
 }
-
-
 
 .info p {
     color: var(--p-color);
@@ -340,6 +344,42 @@ Text Domain: temo
     padding: 55px 15px;
 }
 
+.services .services-title {
+    background-color: #14b789;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px 25px;
+    margin: 25px 0;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.services-title img {
+    height: 160px;
+    width: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.services-title h2 {
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -1px;
+    font-size: var(--h2-font-size);
+    color: var(--secondary-color);
+    letter-spacing: -3px;
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+}
+
 .services-thumb {
     background: var(--white-color);
     border: 1px solid var(--border-color);
@@ -373,7 +413,7 @@ Text Domain: temo
     align-items: center;
 }
 
-.services-icon-part span.dashicons  {
+.services-icon-part span.dashicons {
     font-size: 90px;
     position: absolute;
     top: 50%;
@@ -387,7 +427,7 @@ Text Domain: temo
 
 .services-thumb:hover {
     border: 2px solid var(--secondary-color);
-    box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
 }
 
 .services-thumb:hover .services-icon-part {

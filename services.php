@@ -18,6 +18,30 @@ if ($temo_services_query->have_posts()) :
 
     <section id='' class="services">
         <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="services-title">
+                        <div>
+                            <?php
+                            if (is_active_sidebar("temo-services-title-img")) :
+                                dynamic_sidebar('temo-services-title-img');
+                            endif;
+                            ?>
+                        </div>
+
+                        <div>
+                            <?php
+                            if (is_active_sidebar("temo-services-title-txt")) :
+                                dynamic_sidebar('temo-services-title-txt');
+                            endif;
+                            ?>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
             <div class="row gy-4">
 
                 <?php while ($temo_services_query->have_posts()) :
