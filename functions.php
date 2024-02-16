@@ -139,6 +139,30 @@ function temo_widget_areas()
             'after_title' => '',
         )
     );
+
+    register_sidebar(
+        array(
+            'name' => __('Projects Title Image', 'temo'),
+            'id' => 'temo-projects-title-img',
+            'description' => __('This is Projects title image', 'temo'),
+            'before_widget' => '<div class="widget %1$s %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '',
+            'after_title' => '',
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name' => __('Projects Title txt', 'temo'),
+            'id' => 'temo-projects-title-txt',
+            'description' => __('This is Projects title txt', 'temo'),
+            'before_widget' => '<div class="widget %1$s %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '',
+            'after_title' => '',
+        )
+    );
 }
 add_action('widgets_init', 'temo_widget_areas');
 

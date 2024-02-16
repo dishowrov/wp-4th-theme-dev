@@ -275,6 +275,7 @@ Text Domain: temo
     background: var(--section-bg-color);
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
+    padding: 75px 15px;
 }
 
 .info .featured-border-bottom {
@@ -342,6 +343,9 @@ Text Domain: temo
 
 .services {
     padding: 55px 15px;
+    background: var(--section-bg-color);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .services .services-title {
