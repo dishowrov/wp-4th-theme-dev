@@ -47,10 +47,6 @@ if ($temo_services_query->have_posts()) :
 
                             <a href="#" class="custom-btn custom-border-btn btn mt-3">Discover More</a>
 
-                            <!-- <div class="services-icon-wrap d-flex justify-content-center align-items-center">
-                                <i class="services-icon bi-globe"></i>
-                            </div> -->
-
                             <div class="services-icon-part">
                                 <?php
                                 $service_icon = get_post_meta(get_the_ID(), "service icon", true);
