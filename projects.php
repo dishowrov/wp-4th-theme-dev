@@ -38,7 +38,6 @@ if ($temo_projects_query->have_posts()) :
                     </div>
                 </div>
 
-
             </div>
         </div>
 

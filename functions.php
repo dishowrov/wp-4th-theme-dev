@@ -163,6 +163,30 @@ function temo_widget_areas()
             'after_title' => '',
         )
     );
+
+    register_sidebar(
+        array(
+            'name' => __('Contacts Title Image', 'temo'),
+            'id' => 'temo-contacts-title-img',
+            'description' => __('This is Contacts title Image', 'temo'),
+            'before_widget' => '<div class="widget %1$s %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '',
+            'after_title' => '',
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name' => __('Contacts Title Text', 'temo'),
+            'id' => 'temo-contacts-title-txt',
+            'description' => __('This is Contacts title text', 'temo'),
+            'before_widget' => '<div class="widget %1$s %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '',
+            'after_title' => '',
+        )
+    );
 }
 add_action('widgets_init', 'temo_widget_areas');
 

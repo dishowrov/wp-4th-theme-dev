@@ -9,6 +9,7 @@ get_template_part("about");
 get_template_part("informations");
 get_template_part("services");
 get_template_part("projects");
+get_template_part("contact");
 
 ?>
 
