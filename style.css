@@ -440,8 +440,110 @@ Text Domain: temo
     color: var(--white-color);
 }
 
+.projects {
+    padding-top: 145px;
+    padding-bottom: 145px;
+}
+
+.projects .project-title {
+    background-color: #14b789;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px 25px;
+    margin: 25px auto;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.project-title img {
+    height: 160px;
+    width: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.project-title h2 {
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -1px;
+    font-size: var(--h2-font-size);
+    color: var(--secondary-color);
+    letter-spacing: -3px;
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+}
+
+.projects-thumb {
+    background: var(--section-bg-color);
+    border: 2px solid var(--white-color);
+    border-radius: var(--border-radius-medium);
+    position: relative;
+    overflow: hidden;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding: 40px;
+    transition: all ease 0.5s;
+}
+
+.projects-tag a {
+    font-size: var(--menu-font-size);
+    font-weight: var(--font-weight-medium);
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.projects-title {
+    margin-bottom: 20px;
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -1px;
+    color: var(--dark-color);
+}
+
+.projects-thumb .popup-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.projects-image {
+    border-radius: var(--border-radius-medium);
+    display: block;
+    width: 100%;
+    transform: rotate(10deg) translateY(80px);
+    transition: all ease 0.5s;
+    overflow: hidden;
+}
+
+.projects-image img {
+    height: auto;
+    width: 100%;
+}
+
+.projects-thumb:hover {
+    border-color: var(--secondary-color);
+}
+
+.projects-thumb:hover .projects-image, .projects-thumb:focus .projects-image {
+    transform: rotate(0) translateY(0);
+}
 
 
+
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
 
 .py-2 {
     padding-top: .5rem !important;

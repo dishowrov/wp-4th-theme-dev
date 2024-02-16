@@ -92,7 +92,7 @@ if ($temo_services_query->have_posts()) :
 
 <?php
 else :
-    echo ('Sorry, no project published today, please try tomorrow');
+    echo ('Sorry, no service available today, please try again tomorrow');
 endif;
 
 ?>

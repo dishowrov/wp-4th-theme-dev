@@ -230,5 +230,53 @@ function temo_services()
     );
     add_theme_support('post-thumbnails');
 }
-
 add_action('init', 'temo_services');
+
+
+
+function temo_projects()
+{
+    register_post_type(
+        'Projects',
+        array(
+            'labels' => array(
+                'name' => ('Projects'),
+                'singular_name' => ('Project'),
+                'add_new' => ('Add New Project'),
+                'add_new_item' => ('Add New Project'),
+                'edit_item' => ('Edit Project'),
+                'new_item' => ('New Project'),
+                'view_item' => ('View Project'),
+                'not_found' => ("Sorry, we coundn't find the project you are looking for."),
+            ),
+            'menu_icon' => 'dashicons-images-alt2',
+            'public' => true,
+            'publicly_queryable' => true,
+            'exclude_from_search' => true,
+            'menu_position' => 4,
+            'has_archive' => true,
+            'hierarchial' => true,
+            'show_ui' => true,
+            'capability_type' => 'post',
+            'rewrite' => array('slag' => 'project'),
+            'supports' => array('title', 'thumbnail', 'editor', 'custom-fields'),
+        )
+    );
+
+    register_taxonomy(
+        'project_category',
+        'projects',
+        array(
+            'label' => __('Project Categories', 'temo'),
+            'public' => true,
+            'hierarchical' => true,
+            'show_ui' => true,
+            'show_in_nav_menus' => true,
+            'show_admin_column' => true,
+            'rewrite' => array('slug' => 'project-category'),
+        )
+    );
+
+    add_theme_support('post-thumbnails');
+}
+add_action('init', 'temo_projects');
