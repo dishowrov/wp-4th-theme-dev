@@ -187,6 +187,18 @@ function temo_widget_areas()
             'after_title' => '',
         )
     );
+
+    register_sidebar(
+        array(
+            'name' => __('Experiences Title Text', 'temo'),
+            'id' => 'temo-experiences-title-txt',
+            'description' => __('This is Experiences title text', 'temo'),
+            'before_widget' => '<div class="widget %1$s %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '',
+            'after_title' => '',
+        )
+    );
 }
 add_action('widgets_init', 'temo_widget_areas');
 
@@ -211,7 +223,6 @@ function temo_customize_register($wp_customize)
     )));
 }
 add_action('customize_register', 'temo_customize_register');
-
 
 
 

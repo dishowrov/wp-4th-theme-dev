@@ -146,6 +146,9 @@ Text Domain: temo
     width: 100%;
 }
 
+
+
+
 .hero {
     padding: 150px 15px 200px 15px;
 }
@@ -246,6 +249,9 @@ Text Domain: temo
     background-color: var(--secondary-color);
 }
 
+
+
+
 .about {
     padding: 115px 15px;
 }
@@ -306,6 +312,9 @@ Text Domain: temo
     font-size: var(--p-font-size);
     font-weight: var(--font-weight-normal);
 }
+
+
+
 
 .info {
     background: var(--section-bg-color);
@@ -376,6 +385,22 @@ Text Domain: temo
     padding: 13px 30px;
     display: inline-block;
 }
+
+
+.experiences {
+    padding: 123px 15px;
+}
+
+.experiences .exp-title h2 {
+    text-align: center;
+    font-size: var(--h3-font-size);
+    margin-bottom: 3rem;
+    color: var(--dark-color);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -1px;
+}
+
+
 
 .services {
     padding: 55px 15px;
@@ -476,6 +501,9 @@ Text Domain: temo
     color: var(--white-color);
 }
 
+
+
+
 .projects {
     padding-top: 145px;
     padding-bottom: 145px;
@@ -573,6 +601,8 @@ Text Domain: temo
 .projects-thumb:focus .projects-image {
     transform: rotate(0) translateY(0);
 }
+
+
 
 .contact .contact-title {
     background-color: #14b789;
