@@ -86,7 +86,8 @@ if ($temo_projects_query->have_posts()) :
             <?php
 
             endwhile;
-            wp_reset_postdata(); ?>
+            wp_reset_postdata();
+             ?>
 
         </div>
     </div>

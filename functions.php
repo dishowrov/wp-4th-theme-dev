@@ -115,7 +115,7 @@ function temo_widget_areas()
             'after_title' => '',
         )
     );
-    
+
     register_sidebar(
         array(
             'name' => __('Services Title Image', 'temo'),
@@ -315,3 +315,36 @@ function temo_projects()
     add_theme_support('post-thumbnails');
 }
 add_action('init', 'temo_projects');
+
+
+
+function temo_experienced_companies()
+{
+    register_post_type(
+        'Experiences',
+        array(
+            'labels' => array(
+                'name' => __('Experiences'),
+                'singular_name' => __('Experiences'),
+                'add_new' => ('Add New Company'),
+                'add_new_item' => ('Add New company'),
+                'edit_item' => ('Edit Experience'),
+                'new_item' => ('New Experience'),
+                'view_item' => ('View Experience'),
+                'not_found' => ("Sorry, we coundn't find the Experienced company logo you are looking for."),
+            ),
+            'menu_icon' => 'dashicons-text-page',
+            'public' => true,
+            'has_archive' => true,
+            'publicly_queryable' => true,
+            'exclude_from_search' => true,
+            'menu_position' => 4,
+            'has_archive' => true,
+            'hierarchial' => true,
+            'show_ui' => true,
+            'rewrite' => array('slag' => 'experience'),
+            'supports' => array('title', 'thumbnail'),
+        )
+    );
+}
+add_action('init', 'temo_experienced_companies');

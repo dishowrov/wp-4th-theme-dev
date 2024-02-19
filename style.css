@@ -400,6 +400,21 @@ Text Domain: temo
     letter-spacing: -1px;
 }
 
+.experiences .row {
+    display: flex;
+     flex-wrap: wrap;
+}
+
+.exp-company {
+    max-width: 20%;
+    text-align: center;
+}
+
+.exp-company img {
+    width: 45%;
+    height: auto;
+}
+
 
 
 .services {
