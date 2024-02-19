@@ -117,7 +117,6 @@ Text Domain: temo
     margin-left: 20px;
 }
 
-
 .header .navigation ul li a {
     color: var(--section-bg-color);
     font-size: var(--menu-font-size);
@@ -146,7 +145,6 @@ Text Domain: temo
 .header .navigation ul li:hover .header .navigation ul li a::after {
     width: 100%;
 }
-
 
 .hero {
     padding: 150px 15px 200px 15px;
