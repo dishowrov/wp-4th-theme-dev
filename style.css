@@ -402,7 +402,7 @@ Text Domain: temo
 
 .experiences .row {
     display: flex;
-     flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .exp-company {
