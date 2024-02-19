@@ -338,7 +338,7 @@ function temo_experienced_companies()
             'has_archive' => true,
             'publicly_queryable' => true,
             'exclude_from_search' => true,
-            'menu_position' => 4,
+            'menu_position' => 5,
             'has_archive' => true,
             'hierarchial' => true,
             'show_ui' => true,
