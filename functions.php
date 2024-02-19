@@ -199,6 +199,18 @@ function temo_widget_areas()
             'after_title' => '',
         )
     );
+
+    register_sidebar(
+        array(
+            'name' => __('Contact Social Medias', 'temo'),
+            'id' => 'temo-contact-social-medias',
+            'description' => __('This is social media links part of the contact section.', 'temo'),
+            'before_widget' => '<div class="widget %1$s %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '',
+            'after_title' => '',
+        )
+    );
 }
 add_action('widgets_init', 'temo_widget_areas');
 

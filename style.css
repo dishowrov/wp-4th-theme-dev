@@ -618,6 +618,9 @@ Text Domain: temo
 }
 
 
+.contact {
+    padding: 25px 15px 55px 15px;
+}
 
 .contact .contact-title {
     background-color: #14b789;
