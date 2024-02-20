@@ -1,5 +1,8 @@
 <?php
 
+$info_phone = get_post_meta(get_the_ID(), "phone no", true);
+$info_email = get_post_meta(get_the_ID(), "email", true);
+
 // Custom query to retrieve only project titles
 $query = "SELECT ID, post_title FROM $wpdb->posts WHERE post_type = 'services' AND post_status = 'publish'";
 
@@ -37,10 +40,10 @@ $results = $wpdb->get_results($query);
         <div class="row">
 
             <div class="col-md-6">
-
                 <div class="contact-bottom-left">
+
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6 left">
 
                             <div class="contact-services">
                                 <h5 class="contact-portion-title">SERVICES</h5>
@@ -75,9 +78,36 @@ $results = $wpdb->get_results($query);
                             </div>
 
                         </div>
-                    </div>
-                </div>
 
+                        <div class="col-md-6">
+                            <div class="">
+                                <h5 class="contact-portion-title">ABOUT</h5>
+                                <p class="contact-portion-details">
+                                    Joshua is a professional web developer. Feel free to get in touch with me.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h5 class="contact-portion-title">EMAIL</h5>
+                                <span>
+                                    <?php
+                                    echo esc_html($info_email);
+                                    ?>
+                                </span>
+                            </div>
+
+                            <div>
+                                <h5 class="contact-portion-title">CALL</h5>
+                                <span>
+                                    <?php
+                                    echo esc_html($info_phone);
+                                    ?>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
         </div>

@@ -661,6 +661,21 @@ Text Domain: temo
     color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
 }
 
+.contact-bottom-left {
+    background: var(--white-color);
+    padding: 60px 30px 30px 30px;
+    height: 100%;
+    border-radius: var(--border-radius-small);
+    -webkit-border-radius: var(--border-radius-small);
+    -moz-border-radius: var(--border-radius-small);
+    -ms-border-radius: var(--border-radius-small);
+    -o-border-radius: var(--border-radius-small);
+}
+
+.contact-bottom-left .left {
+    border-right: 1px solid var(--border-color);
+}
+
 .contact-services ul {
     padding: 0;
 }
@@ -670,6 +685,21 @@ Text Domain: temo
     display: inline-block;
     margin: 5px 10px 5px 1px;
     padding: 0;
+}
+
+h5.contact-portion-title {
+    font-weight: var(--font-weight-bold);
+    margin: 2rem 0 1rem 0 !important;
+    font-size: var(--menu-font-size);
+    color: var(--dark-color);
+    text-transform: uppercase;
+}
+
+p.contact-portion-details {
+    margin-bottom: .5rem !important;
+    color: var(--p-color);
+    font-size: var(--p-font-size);
+    font-weight: var(--font-weight-normal);
 }
 
 
