@@ -4,6 +4,15 @@ $info_phone = get_post_meta(get_the_ID(), "phone no", true);
 $info_email = get_post_meta(get_the_ID(), "email", true);
 
 
+$args = array(
+    'posts_per_page' => -1, // Retrieve all posts
+    'post_type' => 'services',
+    'post_status' => 'publish',
+    'order' => 'ASC',
+    'paged' => '',
+);
+$services_query = new WP_Query($args);
+
 // Custom query to retrieve only project titles
 $query = "SELECT ID, post_title FROM $wpdb->posts WHERE post_type = 'services' AND post_status = 'publish'";
 
@@ -133,7 +142,9 @@ $results = $wpdb->get_results($query);
                                 if ($results) {
                                     echo '<div class="row">';
                                     foreach ($results as $result) {
+                                        $post_id = $result->ID;
                                         $project_title = esc_html($result->post_title);
+                                        $service_icon = get_post_meta(get_the_ID(), "service icon", true);
                                 ?>
                                         <div class="col-md-3">
                                             <div class="form-check form-check-inline">
@@ -141,6 +152,16 @@ $results = $wpdb->get_results($query);
 
                                                 <label class="form-check-label" for="inlineCheckbox2">
                                                     <span class="dashicons dashicons-admin-site-alt3"></span>
+
+                                                    <?php
+                                                    if ($services_query->have_posts()) :
+                                                        while ($services_query->have_posts()) : $services_query->the_post();
+                                                            $post_id = get_the_ID();
+                                                            echo $service_icon;
+                                                        endwhile;
+                                                        wp_reset_postdata();
+                                                    endif;
+                                                    ?>
 
                                                     <h4 class="form-check-label-text">
                                                         <?php echo $project_title; ?>
