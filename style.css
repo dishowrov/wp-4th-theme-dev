@@ -8,7 +8,7 @@ Version: 1.2.3
 License: GNU
 License URI: http://www.gnu.org/license/gpl-2.0.html
 Tags: blog, portfolio, education
-Text Domain: temo
+Text Domain: temo  
 */
 
 :root {
@@ -620,6 +620,9 @@ Text Domain: temo
 
 .contact {
     padding: 25px 15px 55px 15px;
+    background: var(--section-bg-color);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .contact .contact-title {
@@ -656,6 +659,17 @@ Text Domain: temo
     letter-spacing: -3px;
     --bs-text-opacity: 1;
     color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+}
+
+.contact-services ul {
+    padding: 0;
+}
+
+.contact-services ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 5px 10px 5px 1px;
+    padding: 0;
 }
 
 

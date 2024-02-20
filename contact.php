@@ -43,6 +43,8 @@ $results = $wpdb->get_results($query);
                         <div class="col-md-6">
 
                             <div class="contact-services">
+                                <h5 class="contact-portion-title">SERVICES</h5>
+
                                 <?php
                                 if ($results) {
                                     echo '<ul>';
@@ -58,11 +60,18 @@ $results = $wpdb->get_results($query);
                             </div>
 
                             <div class="contact-medias">
+                                <h5 class="contact-portion-title">STAY CONNECTED</h5>
+
                                 <?php
                                 if (is_active_sidebar("temo-contact-social-medias")) :
                                     dynamic_sidebar("temo-contact-social-medias");
                                 endif;
                                 ?>
+                            </div>
+
+                            <div class="contact-cta">
+                                <h5 class="contact-portion-title">SERVICES</h5>
+                                <p class="contact-portion-details">I'm available for freelance projects</p>
                             </div>
 
                         </div>
