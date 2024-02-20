@@ -725,6 +725,22 @@ p.contact-portion-details {
     font-weight: var(--font-weight-normal);
 }
 
+h4.form-check-label-text {
+    color: var(--p-color);
+    display: block;
+    font-size: var(--copyright-font-size);
+    margin-top: 5px;
+}
+
+.contact-form-btn a {
+    background: var(--secondary-color);
+    border: none;
+    border-radius: var(--border-radius-large);
+    color: var(--white-color);
+    font-weight: var(--font-weight-bold);
+    transition: all 0.3s;
+    margin-bottom: 0;
+}
 
 
 

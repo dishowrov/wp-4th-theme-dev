@@ -3,6 +3,7 @@
 $info_phone = get_post_meta(get_the_ID(), "phone no", true);
 $info_email = get_post_meta(get_the_ID(), "email", true);
 
+
 // Custom query to retrieve only project titles
 $query = "SELECT ID, post_title FROM $wpdb->posts WHERE post_type = 'services' AND post_status = 'publish'";
 
@@ -128,53 +129,49 @@ $results = $wpdb->get_results($query);
 
                             <!-- Services Checkboxes -->
                             <div class="row">
-                                <div class="col-md-3">
-                                    <div class="form-check form-check-inline">
-                                        <input name="branding" type="checkbox" class="form-check-input" id="inlineCheckbox2" value="1">
+                                <?php
+                                if ($results) {
+                                    echo '<div class="row">';
+                                    foreach ($results as $result) {
+                                        $project_title = esc_html($result->post_title);
+                                ?>
+                                        <div class="col-md-3">
+                                            <div class="form-check form-check-inline">
+                                                <input name="branding" type="checkbox" class="form-check-input" id="inlineCheckbox2" value="1">
 
-                                        <label class="form-check-label" for="inlineCheckbox2">
-                                            <i class="bi-lightbulb form-check-icon"></i>
-                                            <?php
-                                            $service_icon = get_post_meta(get_the_ID(), "service icon", true);
+                                                <label class="form-check-label" for="inlineCheckbox2">
+                                                    <span class="dashicons dashicons-admin-site-alt3"></span>
 
-                                            echo $service_icon;
-                                            ?>
-                                            <span class="form-check-label-text">Branding</span>
-                                        </label>
-                                    </div>
+                                                    <h4 class="form-check-label-text">
+                                                        <?php echo $project_title; ?>
+                                                    </h4>
+                                                </label>
+                                            </div>
+                                        </div>
+                                <?php
+                                    }
+                                    echo '</div>';
+                                } else {
+                                    echo 'No projects found.';
+                                }
+                                ?>
+                            </div>
+
+                            <!-- Message -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <textarea class="form-control" id="message" rows="7" name="message" placeholder="Tell me about the project"></textarea>
                                 </div>
+                            </div>
 
-                                <div class="col-md-3">
-                                    <div class="form-check form-check-inline">
-                                        <input name="branding" type="checkbox" class="form-check-input" id="inlineCheckbox2" value="1">
-
-                                        <label class="form-check-label" for="inlineCheckbox2">
-                                            <i class="bi-lightbulb form-check-icon"></i>
-                                            <span class="form-check-label-text">Branding</span>
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <div class="form-check form-check-inline">
-                                        <input name="branding" type="checkbox" class="form-check-input" id="inlineCheckbox2" value="1">
-
-                                        <label class="form-check-label" for="inlineCheckbox2">
-                                            <i class="bi-lightbulb form-check-icon"></i>
-                                            <span class="form-check-label-text">Branding</span>
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <div class="form-check form-check-inline">
-                                        <input name="branding" type="checkbox" class="form-check-input" id="inlineCheckbox2" value="1">
-
-                                        <label class="form-check-label" for="inlineCheckbox2">
-                                            <i class="bi-lightbulb form-check-icon"></i>
-                                            <span class="form-check-label-text">Branding</span>
-                                        </label>
-                                    </div>
+                            <!-- Submit Button -->
+                            <div class="col-md-3 ms-auto">
+                                <div class="contact-form-btn">
+                                    <?php
+                                    if (is_active_sidebar("temo-contact-form-btn")) :
+                                        dynamic_sidebar("temo-contact-form-btn");
+                                    endif;
+                                    ?>
                                 </div>
                             </div>
 
