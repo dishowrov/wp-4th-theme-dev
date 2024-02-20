@@ -687,6 +687,29 @@ Text Domain: temo
     padding: 0;
 }
 
+.contact-services ul li a {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-medium);
+    font-size: var(--copyright-font-size);
+    font-weight: var(--font-weight-medium);
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 6px 14px;
+    min-width: 70px;
+    color: var(--p-color);
+    font-size: var(--p-font-size);
+    font-weight: var(--font-weight-normal);
+    text-decoration: none;
+}
+
+.contact-services ul li a:hover {
+    background: var(--secondary-color);
+    color: var(--white-color);
+}
+
 h5.contact-portion-title {
     font-weight: var(--font-weight-bold);
     margin: 2rem 0 1rem 0 !important;
