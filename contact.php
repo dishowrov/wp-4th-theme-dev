@@ -115,6 +115,69 @@ $results = $wpdb->get_results($query);
                     <div class="contact-bottom-right">
                         <form action="">
 
+                            <!-- Name and Email -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" placeholder="Name">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <input type="text" placeholder="Email Address">
+                                </div>
+                            </div>
+
+                            <!-- Services Checkboxes -->
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-check form-check-inline">
+                                        <input name="branding" type="checkbox" class="form-check-input" id="inlineCheckbox2" value="1">
+
+                                        <label class="form-check-label" for="inlineCheckbox2">
+                                            <i class="bi-lightbulb form-check-icon"></i>
+                                            <?php
+                                            $service_icon = get_post_meta(get_the_ID(), "service icon", true);
+
+                                            echo $service_icon;
+                                            ?>
+                                            <span class="form-check-label-text">Branding</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-check form-check-inline">
+                                        <input name="branding" type="checkbox" class="form-check-input" id="inlineCheckbox2" value="1">
+
+                                        <label class="form-check-label" for="inlineCheckbox2">
+                                            <i class="bi-lightbulb form-check-icon"></i>
+                                            <span class="form-check-label-text">Branding</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-check form-check-inline">
+                                        <input name="branding" type="checkbox" class="form-check-input" id="inlineCheckbox2" value="1">
+
+                                        <label class="form-check-label" for="inlineCheckbox2">
+                                            <i class="bi-lightbulb form-check-icon"></i>
+                                            <span class="form-check-label-text">Branding</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-check form-check-inline">
+                                        <input name="branding" type="checkbox" class="form-check-input" id="inlineCheckbox2" value="1">
+
+                                        <label class="form-check-label" for="inlineCheckbox2">
+                                            <i class="bi-lightbulb form-check-icon"></i>
+                                            <span class="form-check-label-text">Branding</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
                         </form>
                     </div>
                 </div>
