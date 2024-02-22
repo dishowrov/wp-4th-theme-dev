@@ -144,24 +144,23 @@ $results = $wpdb->get_results($query);
                                     foreach ($results as $result) {
                                         $post_id = $result->ID;
                                         $project_title = esc_html($result->post_title);
-                                        $service_icon = get_post_meta(get_the_ID(), "service icon", true);
+                                        $service_icon = get_post_meta($post_id, "service icon", true);
                                 ?>
                                         <div class="col-md-3">
                                             <div class="form-check form-check-inline">
                                                 <input name="branding" type="checkbox" class="form-check-input" id="<?php echo $project_title; ?>" value="1">
 
                                                 <label class="form-check-label" for="<?php echo $project_title; ?>">
-                                                    <span class="dashicons dashicons-admin-site-alt3"></span>
 
                                                     <span>
                                                         <?php
-                                                        if ($services_query->have_posts()) :
-                                                            while ($services_query->have_posts()) : $services_query->the_post();
-                                                                $post_id = get_the_ID();
+                                                        // if ($services_query->have_posts()) :
+                                                        //     while ($services_query->have_posts()) : $services_query->the_post();
+                                                        //         $post_id = get_the_ID();
                                                                 echo $service_icon;
-                                                            endwhile;
-                                                            wp_reset_postdata();
-                                                        endif;
+                                                        //     endwhile;
+                                                        //     wp_reset_postdata();
+                                                        // endif;
                                                         ?>
                                                     </span>
 
