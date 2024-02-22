@@ -99,20 +99,20 @@ $results = $wpdb->get_results($query);
 
                                 <div>
                                     <h5 class="contact-portion-title">EMAIL</h5>
-                                    <span>
+                                    <p class="contact-portion-details">
                                         <?php
                                         echo esc_html($info_email);
                                         ?>
-                                    </span>
+                                    </p>
                                 </div>
 
                                 <div>
                                     <h5 class="contact-portion-title">CALL</h5>
-                                    <span>
+                                    <p class="contact-portion-details">
                                         <?php
                                         echo esc_html($info_phone);
                                         ?>
-                                    </span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -139,7 +139,8 @@ $results = $wpdb->get_results($query);
                             <div class="row">
                                 <?php
                                 if ($results) {
-                                    echo '<div class="row">';
+                                    echo '<div class="">';
+
                                     foreach ($results as $result) {
                                         $post_id = $result->ID;
                                         $project_title = esc_html($result->post_title);
@@ -147,20 +148,22 @@ $results = $wpdb->get_results($query);
                                 ?>
                                         <div class="col-md-3">
                                             <div class="form-check form-check-inline">
-                                                <input name="branding" type="checkbox" class="form-check-input" id="inlineCheckbox2" value="1">
+                                                <input name="branding" type="checkbox" class="form-check-input" id="<?php echo $project_title; ?>" value="1">
 
-                                                <label class="form-check-label" for="inlineCheckbox2">
+                                                <label class="form-check-label" for="<?php echo $project_title; ?>">
                                                     <span class="dashicons dashicons-admin-site-alt3"></span>
 
-                                                    <?php
-                                                    if ($services_query->have_posts()) :
-                                                        while ($services_query->have_posts()) : $services_query->the_post();
-                                                            $post_id = get_the_ID();
-                                                            echo $service_icon;
-                                                        endwhile;
-                                                        wp_reset_postdata();
-                                                    endif;
-                                                    ?>
+                                                    <span>
+                                                        <?php
+                                                        if ($services_query->have_posts()) :
+                                                            while ($services_query->have_posts()) : $services_query->the_post();
+                                                                $post_id = get_the_ID();
+                                                                echo $service_icon;
+                                                            endwhile;
+                                                            wp_reset_postdata();
+                                                        endif;
+                                                        ?>
+                                                    </span>
 
                                                     <h4 class="form-check-label-text">
                                                         <?php echo $project_title; ?>

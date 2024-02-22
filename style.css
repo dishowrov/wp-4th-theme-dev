@@ -725,11 +725,57 @@ p.contact-portion-details {
     font-weight: var(--font-weight-normal);
 }
 
+.form-check input[type=checkbox] {
+    height: 0;
+    width: 0;
+}
+
+.form-check {
+    margin: 25px 0 155px 0;
+    position: relative;
+    text-align: center;
+}
+
+.form-check input[type=checkbox]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--white-color);
+    border: 2px solid var(--border-color);
+    width: 100%;
+    padding: 40px 50px;
+    border-radius: .25em;
+}
+
+.form-check:hover input[type=checkbox]::after {
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+}
+
+.form-check input[type=checkbox]:checked:after {
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+}
+
+.form-check label {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
 h4.form-check-label-text {
-    color: var(--p-color);
-    display: block;
-    font-size: var(--copyright-font-size);
-    margin-top: 5px;
+    font-size: 15px;
 }
 
 .contact-form-btn a {
