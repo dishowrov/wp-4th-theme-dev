@@ -127,11 +127,11 @@ $results = $wpdb->get_results($query);
                             <!-- Name and Email -->
                             <div class="row">
                                 <div class="col-md-6">
-                                    <input type="text" placeholder="Name">
+                                    <input type="text" placeholder="Name" class="contact-form-top">
                                 </div>
 
                                 <div class="col-md-6">
-                                    <input type="text" placeholder="Email Address">
+                                    <input type="text" placeholder="Email Address" class="contact-form-top">
                                 </div>
                             </div>
 
