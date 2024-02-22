@@ -3,9 +3,8 @@
 $info_phone = get_post_meta(get_the_ID(), "phone no", true);
 $info_email = get_post_meta(get_the_ID(), "email", true);
 
-
 $args = array(
-    'posts_per_page' => -1, // Retrieve all posts
+    'posts_per_page' => -1,
     'post_type' => 'services',
     'post_status' => 'publish',
     'order' => 'ASC',
