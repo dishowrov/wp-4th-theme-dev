@@ -183,12 +183,12 @@ $results = $wpdb->get_results($query);
                             <!-- Message -->
                             <div class="row">
                                 <div class="col-md-12">
-                                    <textarea class="form-control" id="message" rows="7" name="message" placeholder="Tell me about the project"></textarea>
+                                    <textarea class="form-control" id="message" rows="7" cols="50" name="message" placeholder="Tell me about the project"></textarea>
                                 </div>
                             </div>
 
                             <!-- Submit Button -->
-                            <div class="col-md-3 ms-auto">
+                            <div class="col-md-12">
                                 <div class="contact-form-btn">
                                     <?php
                                     if (is_active_sidebar("temo-contact-form-btn")) :
