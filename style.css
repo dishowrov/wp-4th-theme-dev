@@ -146,6 +146,33 @@ Text Domain: temo
     width: 100%;
 }
 
+.header-rigt-part {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: end;
+}
+
+.header-rigt-part p {
+    cursor: pointer;
+    background: transparent;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--white-color);
+    color: var(--white-color);
+    padding: 8px 22px;
+    font-size: var(--p-font-size);
+    font-weight: var(--font-weight-bold);
+    border-radius: var(--border-radius-large);
+}
+
+.header-rigt-part p:hover {
+    background: var(--white-color);
+    border-color: transparent;
+    color: var(--secondary-color);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+}
+
 
 
 
@@ -737,12 +764,13 @@ input.contact-form-top::placeholder {
     padding-left: 15px;
 }
 
-input.contact-form-top:hover, input.contact-form-top:focus {
+input.contact-form-top:hover,
+input.contact-form-top:focus {
     background-color: transparent;
     border: 2px solid var(--secondary-color);
 }
 
-.form-check input[type=checkbox] { 
+.form-check input[type=checkbox] {
     height: 0;
     width: 0;
 }
@@ -804,7 +832,8 @@ textarea.form-control {
     padding-bottom: 13px;
 }
 
-textarea.form-control:hover, textarea.form-control:focus {
+textarea.form-control:hover,
+textarea.form-control:focus {
     background-color: transparent;
     border: 2px solid var(--secondary-color);
     box-shadow: none;
