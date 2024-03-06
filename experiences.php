@@ -9,7 +9,7 @@ $args = array(
 );
 
 $temo_experienced_companies_logo = new WP_Query($args);
-
+   
 // if ($temo_experienced_companies_logo->have_posts()) :
 
 ?>
