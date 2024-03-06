@@ -2,7 +2,7 @@
 
 $about_subtitle = get_post_meta(get_the_ID(), "about subtitle", true);
 $about_details = get_post_meta(get_the_ID(), "about details", true);
-
+   
 ?>
 
 <!-- About -->
